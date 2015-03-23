@@ -1,0 +1,57 @@
+.subscribe
+     .subscribe__row
+         p.subscribe__row__caption Подпишитесь на рассылку новостей и спецпредложений нашей комании и оставайтесь в курсе последних событий!
+         form.subscribe__row__form
+             input.subscribe__row__form__email(type="email" name="email")
+             input.subscribe__row__form__submit(type="submit" value="Подписаться")
+.social
+    .social__links
+        a.social__link(href="#") О компании
+        a.social__link(href="#") Акции
+        a.social__link(href="#") Статьи
+        a.social__link(href="#") Новости
+        a.social__link(href="#") Контакты
+        a.social__link(href="#") Оплата и доставка
+
+    .social__icons
+        a.social__icons__link.social__icons__link--vk(href="#") 
+            span.fa-stack.fa-lg
+              i.fa.fa-circle.fa-stack-2x.vk
+              i.fa.fa-vk.fa-stack-1x.fa-inverse
+
+        a.social__icons__link.social__icons__link--facebook(href="#") 
+            span.fa-stack.fa-lg
+              i.fa.fa-circle.fa-stack-2x.facebook
+              i.fa.fa-facebook.fa-stack-1x.fa-inverse
+        a.social__icons__link.social__icons__link--twitter(href="#") 
+            span.fa-stack.fa-lg
+              i.fa.fa-circle.fa-stack-2x.twitter
+              i.fa.fa-twitter.fa-stack-1x.fa-inverse
+        a.social__icons__link.social__icons__link--skype(href="#") 
+            span.fa-stack.fa-lg
+              i.fa.fa-circle.fa-stack-2x.skype
+              i.fa.fa-skype.fa-stack-1x.fa-inverse
+        a.social__icons__link.social__icons__link--youtube-play(href="#") 
+            span.fa-stack.fa-lg
+              i.fa.fa-circle.fa-stack-2x.youtube-play
+              i.fa.fa-youtube-play.fa-stack-1x.fa-inverse
+        a.social__icons__link.social__icons__link--instagram(href="#") 
+            span.fa-stack.fa-lg
+              i.fa.fa-circle.fa-stack-2x.instagram
+              i.fa.fa-instagram.fa-stack-1x.fa-inverse
+
+    .copyrights 
+        p &copy; sterling9.com.ua Все права защищены
+            
+            
+    //- It's preferrable to load AMD or CommonJS libraries with require()
+    //- instead of adding them via script tags. NPM and Bower packages work 
+    //- with require(). Bower packages can be all included at once with
+    //- require('bower-components'), or individually by their package name
+    
+    script(src="/bower_components/jquery/dist/jquery.min.js")
+    script(src="/scripts/main.js")
+    script(src='/bower_components/slider-revolution/src/js/jquery.themepunch.revolution.min.js')
+    script(src='/bower_components/slider-revolution/src/js/jquery.themepunch.plugins.min.js')
+    script(src='/bower_components/slider-revolution/src/js/jquery.themepunch.revolution.min.js')
+    //endbuild

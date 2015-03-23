@@ -1,0 +1,121 @@
+doctype html
+html
+  head
+    //- Bots
+    meta(name="fragment", content="!")
+    //- Classic
+    meta(charset="utf-8")
+    title Sterling9
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="description", content="Серебрянные украшения Стерлинг")
+    meta(name="keywords", content="серебрянные, украшения, серебро, Стерлинг")
+    //- Hide Safari's bars
+    meta(name="apple-mobile-web-app-capable", content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style", content="black")
+    meta(name="viewport", content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no, minimal-ui")
+    //- Open Graph
+    meta(property="og:title", content="Sterling9")
+    meta(property="og:image", content="/img/og_image.png")
+    meta(property="og:site_name", content="Sterling9")
+    meta(property="og:type", content="website")
+    meta(property="og:url", content="n")
+    meta(property="og:locale", content="ru_RU")
+    meta(property="og:description", content="Серебрянные украшения Стерлинг")
+    //- Google
+    meta(name="google", content="notranslate")
+    //- Twitter
+    //- <meta name=”twitter:card” content=”summary”>
+    meta(name="twitter:url", content="n")
+    meta(name="twitter:title", content="Sterling9")
+    meta(name="twitter:description", content="Серебрянные украшения Стерлинг")
+    meta(name="twitter:image", content="/img/og_image.png")
+    //- Canonical URL
+    link(rel="canonical", href="n")
+    //- Favicon
+    link(rel="apple-touch-icon", sizes="57x57", href="/apple-touch-icon-57x57.png")
+    link(rel="apple-touch-icon", sizes="114x114", href="/apple-touch-icon-114x114.png")
+    link(rel="apple-touch-icon", sizes="72x72", href="/apple-touch-icon-72x72.png")
+    link(rel="apple-touch-icon", sizes="144x144", href="/apple-touch-icon-144x144.png")
+    link(rel="apple-touch-icon", sizes="60x60", href="/apple-touch-icon-60x60.png")
+    link(rel="apple-touch-icon", sizes="120x120", href="/apple-touch-icon-120x120.png")
+    link(rel="apple-touch-icon", sizes="76x76", href="/apple-touch-icon-76x76.png")
+    link(rel="apple-touch-icon", sizes="152x152", href="/apple-touch-icon-152x152.png")
+    link(rel="apple-touch-icon", sizes="180x180", href="/apple-touch-icon-180x180.png")
+    link(rel="icon", type="image/png", href="/favicon-192x192.png", sizes="192x192")
+    link(rel="icon", type="image/png", href="/favicon-160x160.png", sizes="160x160")
+    link(rel="icon", type="image/png", href="/favicon-96x96.png", sizes="96x96")
+    link(rel="icon", type="image/png", href="/favicon-16x16.png", sizes="16x16")
+    link(rel="icon", type="image/png", href="/favicon-32x32.png", sizes="32x32")
+    meta(name="msapplication-TileColor", content="#ff9f19")
+    meta(name="msapplication-TileImage", content="/mstile-144x144.png")
+    link(href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic&subset=cyrillic-ext,latin', rel='stylesheet', type='text/css')
+
+    //- Do not modify these semantic comments. They are used by useref and 
+    //- wiredep to compile dependencies into single minified CSS and JS files
+
+    //build:css /css/main.css
+    //
+    //endbower
+    //- Add additional CSS links here if you need any
+    //- CSS files installed with Bower are included automatically
+    link(rel="stylesheet", href="/bower_components/fontawesome/css/font-awesome.css")
+    link(rel="stylesheet", href="/styles/main.css")
+    link(rel="stylesheet", href="/bower_components/normalize.css/normalize.css")
+    link(rel="stylesheet", href="/bower_components/css-recipe-clearfix/index.css")
+    link(rel='stylesheet', type='text/css', href='/bower_components/slider-revolution/src/css/settings.css', media='screen')
+    //endbuild
+
+  body
+    .header
+        .header__contacts
+            .header__contacts__time Ежедневно с 8:00 до 20:00
+            .header__contacts__phone +38 (066) 344 79 50
+            .header__contacts__phone +38 (050) 400 40 10
+            a(href="#").header__contacts__callme Перезвонить мне
+        
+        .header__menu
+            a(href="/about.html").header__menu__item О компании
+            a(href="#").header__menu__item Контакты
+            a(href="#").header__menu__item Оплата и доставка
+            a(href="#").header__menu__item Отзывы
+            a(href="#").header__menu__item.header__menu__item--warning Акции
+            .header__menu__user
+                a(href="#").header__menu__user.header__menu__user--login 
+                    span Вход
+                a(href="#").header__menu__user.header__menu__user--cart 
+                    span 0.00 грн (0 товаров)
+                    
+        a(href="#").header__logo
+            img(src="/img/logo.png")
+            
+    ul.main-menu
+      li.main-menu__listitem
+        a.main-menu__item.main-menu__item--active(href='#') Кольца
+        ul.main-menu__dropdown
+          li
+            a.main-menu__dropdown__item(href='#') Subitem 1
+          li
+            a.main-menu__dropdown__item(href='#') Subitem 2
+          li
+            a.main-menu__dropdown__item(href='#') Subitem 3
+          li
+            a.main-menu__dropdown__item(href='#') Subitem 4
+          li
+            a.main-menu__dropdown__item(href='#') Subitem 5
+      li.main-menu__listitem
+        a.main-menu__item(href='#') Серьги
+      li.main-menu__listitem
+        a.main-menu__item(href='#') Браслеты
+      li.main-menu__listitem
+        a.main-menu__item(href='#') Цепи
+      li.main-menu__listitem
+        a.main-menu__item(href='#') Подвесы
+      li.main-menu__listitem
+        a.main-menu__item(href='#') Брошки и булавки
+      li.main-menu__listitem
+        a.main-menu__item(href='#') Комплекты
+      li.main-menu__listitem
+        a.main-menu__item(href='#') Ложки
+      form.main-menu__search(_lpchecked='1')
+        input.main-menu__search__query(type='text', placeholder='Поиск')
+        button.main-menu__search__submit(type='submit', name='submit')

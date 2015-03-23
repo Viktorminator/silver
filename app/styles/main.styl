@@ -1,0 +1,460 @@
+// Mixins
+vendor(prop, args)
+    -webkit-{prop} args
+    -moz-{prop} args
+    -ms-{prop} args
+    -o-{prop} args
+    {prop} args
+
+border-radius()
+	vendor('border-radius', arguments)
+
+box-shadow()
+	vendor('box-shadow', arguments)
+
+transition()
+	vendor('transition', arguments)
+
+transform()
+	vendor('transform', arguments)
+
+transform-origin()
+	vendor('transform-origin', arguments)
+
+// Color Variables
+$color_primary    = #48A3F1
+$color_secondary = #BFAB65
+$color_error         = #F03E42
+$color_info           = #6DBFE5
+$color_success     = #BAB822
+$color_font          = #333333
+$color_font_secondary = #797159
+$color_font_active = #BFAA64
+$color_background = #F1EFEA
+
+html
+    height 100%
+body
+    color $color_font
+    background: #FFF
+    font-family PT Sans, Arial, sans-serif
+    color $color_font
+    font-size 17px
+    position relative
+    margin 0 auto
+h1,h2,h3,h4,h5,h6
+    font-weight 700
+
+/******* EXTENDING CLASSES ********/
+.row
+    margin 0 auto
+    width 1164px
+.badge
+    position absolute
+    top 0
+    right 36px
+    color #fff
+    padding 5px 10px
+    font-weight 700
+    font-size 11px
+    text-transform uppercase
+.more
+    margin-top 40px
+    color #fff
+    font-weight 700
+    padding 10px 15px
+    text-transform uppercase
+    text-decoration none
+    &:hover
+        color $color_font
+        transition(color, 200ms linear)
+
+/******* HEADER *******/
+.header
+    @extend .row
+    padding 29px 10px 0
+    height 160px
+    &__contacts
+        text-align center
+        float left
+        width 300px
+        color $color_font_secondary
+        &__time
+            font-size 14px
+            font-style italic
+            margin 0 0 6px
+        &__phone
+            font-size 27px
+        &__callme
+            color $color_font_active
+            font-size 18px
+            font-style italic
+            text-decoration none
+            display block
+            padding 10px
+            &:hover
+                text-decoration underline
+    &__logo
+        float right
+        padding-top 7px
+        width 163px
+        height 122px
+    &__menu
+        float right
+        margin-top 25px
+        &__item
+            margin-left 25px
+            text-decoration none
+            color $color_font
+            &--warning
+                color red
+        &__user                         //****** USER MENU
+            color $color_font_active
+            font-size 14px
+            text-align right
+            text-decoration none
+            margin-top 50px
+            &--login
+                position relative
+                margin-right 20px
+                &:before
+                    font-size xx-large
+                    position absolute
+                    text-align center
+                    top -30px
+                    font-family FontAwesome
+                    content "\f090"
+                &:hover
+                    color $color_font
+                    transition(color 200ms linear)
+            &--cart
+                position relative
+                margin-right 20px
+                &:before
+                    font-size xx-large
+                    position absolute
+                    right 3.5rem
+                    top -30px
+                    font-family FontAwesome
+                    content "\f07a"
+                &:hover
+                    color $color_font
+                    transition(color 200ms linear)
+
+/******* MAIN MENU *******/
+.main-menu
+    position relative
+    @extend .row
+    height 35px
+    padding 0 14px
+    margin-bottom 14px
+    &__listitem
+        list-style-type none
+        float left
+    &__item
+        text-decoration none
+        color $color_font
+        padding 14px 18px
+        display inline-block
+        &--active
+            border-bottom 4px solid $color_font_active
+            color $color_font_active
+        &:hover
+            background-color $color_font_active
+            transition(background-color, 200ms linear)
+            color $color_font
+    &__dropdown
+        position absolute
+        width 190px
+        background-color $color_font_active
+        list-style-type none
+        margin-left 0
+        padding 0
+        z-index 1000
+        &__item
+            text-align left
+            display inline-block
+            padding 7px 10px
+            text-decoration none
+            color $color_font
+            width 170px
+            &:hover
+                transition(background-color, 200ms linear)
+                background-color $color_font_secondary
+    &__search
+        float right
+        margin-top 10px
+        &__submit
+            position relative
+            margin-left 9px
+            float right
+            width 34px
+            height 28px
+            background $color_font_active
+            border none
+            &:after
+                color white
+                position absolute
+                top 5px
+                right 8px
+                font-family FontAwesome
+                content "\f002"
+            &:hover
+                background $color_font
+                transition(background-color 200ms linear)
+
+/******* SLIDER *******/
+.tp-banner-container
+    @extend .row
+    position relative
+    padding 10px 0 0 0
+
+
+.tp-banner
+    width 100%
+    position relative
+
+/******* PRODUCTS ********/
+.divider
+    width 100%
+    border none
+    height 1px
+    background-color $color_font_active
+    margin 0
+
+/******* PRODUCTS ROW *******/
+
+.products
+    @extend .row
+    padding-top 26px
+    margin-bottom 25px
+    text-align center
+    &__item
+        position relative
+        display block
+        color $color_font_active
+        float left
+        width 164px
+        height 252px
+        padding-right 36px
+        margin-top 36px
+        &--warning:before
+            @extend .badge
+            content "Акция"
+            background-color $color_error
+        &--success:before
+            @extend .badge
+            content "Топ продаж"
+            background-color $color_success
+        &--info:before
+            @extend .badge
+            content "Новинка"
+            background-color $color_info
+        &__last
+            padding-right 0
+        &__title
+            display block
+            color $color_font_secondary
+            float none
+            text-transform uppercase
+            text-decoration none
+            &:hover
+                color $color_font
+                transition(color 200ms linear)
+        &__sku
+            display block
+            color $color_font_secondary
+            font-size 12px
+        &__price
+            display block
+            padding 26px 0 15px 0
+            font-size 18px
+            line-height 18px
+/******* ADVERTISING ARTICLE *******/
+.ads
+    background url('/img/nice_snow.png')
+    border-top 1px solid $color_font_active
+    border-bottom 1px solid $color_font_active
+    text-align center
+    &__item
+        @extend .row
+        padding 60px 0
+        &__title
+            color $color_font_active
+            font-size 40px
+
+.about
+    @extend .row
+    margin-top 30px
+    background url('/images/about.jpg') no-repeat
+    height 450px
+    &__item
+        width 510px
+        padding 75px 0 0 70px
+        &__title
+            color $color_font_active
+            font-size 40px
+        &__more--success
+            @extend .more
+            background-color $color_info
+
+.salemento
+    @extend .row
+    padding 30px 0 26px 0
+    .sale
+        width 693px
+        height 468px
+        background url('/images/sale.jpg') no-repeat
+        float left
+        &__title
+            margin 100px 0 0 280px
+            color $color_error
+            font-size 35px
+            font-weight 400
+        &__text
+            margin 20px 0 0 280px
+            width 391px
+            padding-right 0
+        &__more--warning
+            @extend .more
+            display inline-block
+            margin 30px 0 0 280px
+            background-color $color_error
+
+    .bikers
+        background url('/images/memento.jpg')
+        width 458px
+        height 468px
+        float right
+        &__title
+            margin 25px 0 0 25px
+            color $color_font
+            font-size 35px
+            font-weight 400
+        &__more
+            display block
+            margin-top 10px
+            padding-left 25px
+            color $color_font
+            text-decoration none
+            &:hover
+                text-decoration underline
+.news
+    @extend .row
+    &__title
+        text-align center
+        color $color_font_active
+        font-size 40px
+    &__item
+        position relative
+        width 369px
+        height 369px
+        float left
+        margin-right 26px
+        &:last-child
+            margin-right 0
+        &__date
+            position absolute
+            top 20px
+            left 0
+            color #fff
+            font-weight 700
+            padding 10px 15px
+            background-color $color_font_active
+        &__title
+            color $color_info
+            font-weight 400
+            font-size 36px
+            text-decoration none
+            &:hover
+                color $color_font
+                transition(color, 200ms linear)
+        &__more
+            color $color_info
+            text-decoration none
+            &:hover
+                text-decoration underline
+
+.subscribe
+    background-color $color_background
+    &__row
+        @extend .row
+        height 154px
+        &__caption
+            padding-top 18px
+            font-size 20px
+        &__form
+            margin-top 26px
+            &__email
+                height 45px
+                width 306px
+                font-size 20px
+                padding-left 10px
+                float left
+            &__submit
+                display block-inline
+                line-height 45px
+                margin-left 9px
+                background-color $color_font
+                color #fff
+                padding 3px 17px
+                border none
+                font-weight 700
+                text-transform uppercase
+                &:hover
+                    background $color_font_secondary
+                    transition(background, 200ms linear)
+
+/********* SOCIAL *********/
+.social
+    text-align center
+    border-top 1px solid $color_font_active
+    &__links
+        margin-top 27px
+    &__link
+        font-size 17px
+        margin-right 40px
+        text-decoration none
+        color $color_font
+        &:last-child
+                margin-right 0
+        &:hover
+            color $color_font_active
+            transition(color, 200ms linear)
+    &__icons
+        padding-top 30px
+        &__link
+            text-decoration none
+            margin-right 19px
+            &:last-child
+                margin-right 0
+            &:hover
+                opacity .8
+                transition(opacity, 200ms linear)
+.copyrights
+    padding 30px
+    font-size 13px
+/******** SOCIAL ICONS COLORS *******/
+.vk
+   color #57799E
+.facebook
+    color #415E9B
+.twitter
+    color #55ACEE
+.skype
+    color #00ACEC
+.youtube-play
+    color #CC181E
+.instagram
+    color #5B3B2A
+
+
+
+.clearfix
+  zoom 1
+  &:after
+    clear both
+
+.clearfix:before, .clearfix:after
+  content ""
+  display block
