@@ -421,7 +421,42 @@ h1,h2,h3,h4,h5,h6
         display block
         margin-left auto
         margin-right auto
-
+/******** DETAILED_INFO.html *********/
+.product
+    width 1152px
+    height 559px
+    background-color $color_background
+    margin 36px auto
+    &__form
+        padding-left 34px
+        &__title
+            padding 28px 0 0 0
+            margin-bottom 0
+            font-weight 400
+            color $color_font_active
+        &__sku
+            color $color_font_secondary
+            display block
+            padding 8px 0 0 0
+        &__image
+            margin-top 29px
+            float left
+        &__feature
+            display block
+            float left
+            padding 29px 0 0 44px 
+            &__weight
+                height 26px
+                &--title
+                    display block
+                    float left
+                    font-size 20px
+                    color red
+                    width 50%
+                &--number
+                    line-height 20px
+            &__feature__size
+                border 1px solid $color_font_active
 /********* SOCIAL *********/
 .social
     text-align center
