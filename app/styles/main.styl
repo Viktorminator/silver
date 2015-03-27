@@ -424,13 +424,13 @@ h1,h2,h3,h4,h5,h6
 /******** DETAILED_INFO.html *********/
 .product
     width 1152px
-    height 559px
+    height 565px
     background-color $color_background
     margin 36px auto
     &__form
         padding-left 34px
         &__title
-            padding 28px 0 0 0
+            padding 24px 0 0 0
             margin-bottom 0
             font-weight 400
             color $color_font_active
@@ -439,24 +439,124 @@ h1,h2,h3,h4,h5,h6
             display block
             padding 8px 0 0 0
         &__image
-            margin-top 29px
+            margin 29px 29px 0 0
             float left
+            width 405px
+            height 405px
         &__feature
-            display block
-            float left
-            padding 29px 0 0 44px 
+            width 660px
+            float right
+            padding-top 26px
             &__weight
                 height 26px
                 &--title
                     display block
                     float left
                     font-size 20px
-                    color red
-                    width 50%
+                    width 300px
                 &--number
                     line-height 20px
-            &__feature__size
-                border 1px solid $color_font_active
+            &__stone
+                padding-top 10px
+                height 66px
+                width 100%
+                &--title
+                    font-size 20px
+                    width 300px
+                    float left
+                &--stone
+                    line-height 20px
+                    float right
+                    width 360px
+                    &--list
+                        list-style-type none
+                        margin 0
+                        padding 0
+                    .stone
+                        padding-bottom 5px    
+            &__size
+                border-top 1px solid $color_font_active
+                padding-top 26px
+                margin-right 55px
+                &--title 
+                    font-size 20px
+                    width 293px
+                    float left
+                &--select
+                    background-color #fff
+                    padding 3px
+                    width 117px
+                    font-style italic
+            &__quantity
+                padding-top 26px
+                width 100%
+                &--title
+                    font-size 20px
+                    width 290px
+                    float left
+                &--link
+                    display block
+                    text-align center
+                    vertical-align center
+                    float left
+                    text-decoration none
+                    width 30px
+                    height 30px
+                    background-color $color_font
+                    color #fff
+                    line-height: 30px;
+                    font-size 28px
+                    margin-top 1px
+                &--link:hover
+                    background-color $color_font_active
+                    transition(background-color, 200ms linear)
+                &--value
+                    float left
+                    width 40px
+                    height 27px
+                    margin 0 10px
+                    text-align center
+            &__price
+                padding-top 20px
+                width 100%
+                &--discount
+                    color $color_error
+                    font-size 23px
+                    text-decoration line-through
+                &--realprice
+                    color $color_font_active
+                    font-size 33px
+                    font-weight 700
+                    width 300px
+                    float left
+                &--available
+                    width 300px
+                    float right
+                    padding 14px 60px 0 0
+            &__submit
+                width 100%
+                padding-top 50px
+                &--btn
+                    background-color $color_info
+                    border none
+                    color #fff
+                    width 145px
+                    height 45px
+                    font-weight 700
+                    &:hover
+                        color $color_font
+                        transition(color, 200ms linear)
+                &--condition
+                    color $color_font
+                    float right
+                    margin 8px 234px 0 0
+.related
+    @extend .row
+    text-transform uppercase
+    font-size 25px
+    margin-bottom 0
+                
+                    
 /********* SOCIAL *********/
 .social
     text-align center
