@@ -550,12 +550,18 @@ h1,h2,h3,h4,h5,h6
                     color $color_font
                     float right
                     margin 8px 234px 0 0
+            
 .related
     @extend .row
     text-transform uppercase
     font-size 25px
-    margin-bottom 0
-                
+    height 400px
+    &__title
+        margin-bottom 0
+.comments
+    @extend .row
+    border-top 1px solid $color_font_active
+    padding-top 20px
                     
 /********* SOCIAL *********/
 .social
