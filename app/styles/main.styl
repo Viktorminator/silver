@@ -550,7 +550,7 @@ h1,h2,h3,h4,h5,h6
                     color $color_font
                     float right
                     margin 8px 234px 0 0
-            
+        
 .related
     @extend .row
     text-transform uppercase
@@ -562,7 +562,46 @@ h1,h2,h3,h4,h5,h6
     @extend .row
     border-top 1px solid $color_font_active
     padding-top 20px
-                    
+
+    
+    
+    
+/********* shop.html ********/
+.filter
+    height 44px
+    background-color $color_background
+    border-top 1px solid $color_font_active 
+    border-bottom 1px solid $color_font_active 
+    padding-top 20px
+    &__row
+        @extend .row
+        &__type
+            width 25%
+            float left
+        &__stone
+            width 25%
+            float left
+        &__price
+            width 25%
+            float left
+        &__output
+            width 25%
+            float right
+            
+.show
+    text-align center
+    margin 40px
+    &__more
+        text-transform uppercase
+        text-decoration none
+        color #fff
+        padding 10px 15px
+        font-weight 700
+        &:hover
+            color $color_font
+            transition(color, 200ms linear)
+        &--success
+            background-color $color_info
 /********* SOCIAL *********/
 .social
     text-align center
