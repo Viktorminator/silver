@@ -9,6 +9,7 @@ include ./includes/head.jade
         label.order__form__label(for="contact_message") Комментарии
         textarea.order__form__comment(name="contact_message")
         br
-        input.order__form__send(name="submit" type="submit" value="ОТПРАВИТЬ ЗАЯВКУ")
+        .order__form__send
+            input.order__form__send__button(name="submit" type="submit" value="ОТПРАВИТЬ ЗАЯВКУ")
         p Наш менеджер свяжется с вами в ближайшее время
 include ./includes/footer.jade
