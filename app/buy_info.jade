@@ -1,0 +1,14 @@
+include ./includes/head.jade
+.order
+    form.order__form(action="" metod="post")
+        h1.order__form__title ОФОРМЛЕНИЕ ЗАКАЗА
+        label.order__form__label(for="contact_name") Имя
+        input.order__form__input(name="contact_name") 
+        label.order__form__label(for="contact_email") Email или телефон
+        input.order__form__input(name="contact_email")
+        label.order__form__label(for="contact_message") Комментарии
+        textarea.order__form__comment(name="contact_message")
+        br
+        input.order__form__send(name="submit" type="submit" value="ОТПРАВИТЬ ЗАЯВКУ")
+        p Наш менеджер свяжется с вами в ближайшее время
+include ./includes/footer.jade
