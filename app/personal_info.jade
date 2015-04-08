@@ -1,0 +1,13 @@
+include ./includes/head.jade
+.info
+    form.info__form(action="" metod="post")
+        h1.info__form__title ПРОФИЛЬ
+        label.info__form__label(for="contact_name") Имя
+        input.info__form__input(name="contact_name") 
+        label.info__form__label(for="contact_email") Email
+        input.info__form__input(type="email" name="contact_email")
+        label.info__form__label(for="contact_phone") Номер телефона
+        input.info__form__phone(name="contact_phone")
+        checkbox.info__form__checkbox Я хочу получать уведомления об акциях и специальных предложениях на указанный email
+        input.info__form__send__button(name="submit" type="submit" value="ОТПРАВИТЬ ЗАЯВКУ")
+include ./includes/footer.jade

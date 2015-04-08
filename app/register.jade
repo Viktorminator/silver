@@ -1,0 +1,15 @@
+include ./includes/head.jade
+.register
+    form.register__form(action="" metod="post")
+        h1.register__form__title ПРОФИЛЬ
+        label.register__form__label(for="contact_name") Имя
+        input.register__form__input(name="contact_name") 
+        label.register__form__label(for="contact_email") Email
+        input.register__form__input(type="email" name="contact_email")
+        label.register__form__password(type="password" for="contact_password") Пароль
+        input.register__form__phone(type="password" name="contact_password")
+        label.register__form__password(type="password" for="contact_password2") Повторите пароль
+        input.register__form__phone(type="password" name="contact_password2")
+        checkbox.register__form__checkbox Я хочу получать уведомления об акциях и специальных предложениях на указанный email
+        input.register__form__send__button(name="submit" type="submit" value="ОТПРАВИТЬ ЗАЯВКУ")
+include ./includes/footer.jade
