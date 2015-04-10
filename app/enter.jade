@@ -1,2 +1,14 @@
 include ./includes/head.jade
+.header__menu__login
+    form.login
+        label.header__menu__login__label(for="login_email") Email
+        input.header__menu__login__input(type="email" placeholder="E-mail")
+        label.header__menu__login__label(for="login_password") Пароль
+        input.header__menu__login__input(type="password" placeholder="Пароль")
+        input.header__menu__login__checkbox(type="checkbox" checked) 
+        label.header__menu__login__remember(for="checkbox") Запомнить
+        input.header__menu__login__submit(type="submit" value="ВОЙТИ")
+        a.header__menu__login__clearpass(href="#") Забыли пароль?
+        a.header__menu__login__register(href="#") Регистрация
+
 include ./includes/footer.jade
