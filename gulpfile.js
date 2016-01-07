@@ -23,19 +23,23 @@ gulp.task('templatesMin', ['styles', 'scripts'], function () {
     .on('error', $.util.log)
     .pipe(assets)
     .pipe($.if('*.js', $.uglify()))
-    .pipe($.if('*.css', $.csso()))
+//    .pipe($.if('*.css', $.csso()))
     .pipe(assets.restore())
     .pipe($.useref())
+<<<<<<< HEAD
+=======
+//    .pipe($.if('*.html', $.minifyHtml({conditionals: true})))
+>>>>>>> 81eab00a6adb25d96bb3827ecc464f862c4ebab2
     .pipe(gulp.dest('dist'));
 });
 
 gulp.task('styles', function () {
   gulp.src('app/styles/**/*.styl')
     .pipe($.stylus({
-      compress: true
+      compress: false
     }))
     .on('error', $.util.log)
-    .pipe($.concat('main.css'))
+//    .pipe($.concat('main.css'))
     .pipe($.postcss([
       require('autoprefixer-core')({ browsers: ['> 2%']})
     ]))
@@ -141,5 +145,6 @@ gulp.task('serve:production', ['build'], function () {
   ]).on('change', reload);
 });
 
-gulp.task('serve', ['serve:develop'], function () {
+gulp.task('serve', ['serve:develop'], 
+function () {
 });
