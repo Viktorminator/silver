@@ -26,7 +26,6 @@ gulp.task('templatesMin', ['styles', 'scripts'], function () {
     .pipe($.if('*.css', $.csso()))
     .pipe(assets.restore())
     .pipe($.useref())
-    .pipe($.if('*.html', $.minifyHtml({conditionals: true})))
     .pipe(gulp.dest('dist'));
 });
 
