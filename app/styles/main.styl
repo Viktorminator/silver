@@ -716,7 +716,7 @@ h1,h2,h3,h4,h5,h6
     font-size 13px
 /******** SOCIAL ICONS COLORS *******/
 .vk
-   color #57799E
+    color #57799E
 .facebook
     color #415E9B
 .twitter
@@ -742,4 +742,19 @@ h1,h2,h3,h4,h5,h6
 
 /******** CONTACT.html *******/
 .map
-  background-image url('../img/contact.jpg')
+    @extend .row
+    padding-top 38px
+    &__letter
+        position absolute
+        top 730px
+        box-sizing border-box
+        width 473px
+        height 212px
+        padding 12px
+        margin 0 340px
+        background-image: repeating-linear-gradient(135deg, #F29B91 0px, #F09290 30px, #fff 30px, #fff 50px, #83B3DB 50px, #84ADCB 80px, #fff 80px, #fff 100px);
+        &__text
+            box-sizing border-box
+            padding 12px 12px 0 120px
+            background #fff
+            height 190px

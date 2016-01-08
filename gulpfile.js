@@ -9,7 +9,7 @@ var reload = browserSync.reload;
 gulp.task('clean', require('del').bind(null, ['dist']));
 
 gulp.task('templates', function () {
-  gulp.src('app/**/*.jade')
+  gulp.src('app/*.jade')
     .pipe($.jade())
     .on('error', $.util.log)
     .pipe(gulp.dest('dist'));
@@ -35,7 +35,7 @@ gulp.task('styles', function () {
       compress: false
     }))
     .on('error', $.util.log)
-//    .pipe($.concat('main.css'))
+    .pipe($.concat('main.css'))
     .pipe($.postcss([
       require('autoprefixer-core')({ browsers: ['> 2%']})
     ]))
