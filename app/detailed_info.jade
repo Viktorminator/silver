@@ -1,0 +1,70 @@
+include ./includes/head.jade
+.product
+    form.product__form(action="")
+        h1.product__form__title Кольца
+        span.product__form__sku арт. 123454
+        img.product__form__image(src="http://lorempixel.com/405/405/abstract")
+        .product__form__feature
+            .product__form__feature__weight
+                span.product__form__feature__weight--title Вес:
+                span.product__form__feature__weight--number 3,15 г
+            .product__form__feature__stone
+                .product__form__feature__stone--title Вставки:
+                .product__form__feature__stone--stone 
+                    ul.product__form__feature__stone--stone--list
+                        li.stone фианит(12 шт.)
+                        li.stone жемчуг имитация (1 шт.)
+            .product__form__feature__size.clearfix
+                span.product__form__feature__size--title Размер:
+                select.product__form__feature__size--select
+                    option Выбрать
+                    option Пункт 1
+                    option Пункт 2
+            .product__form__feature__quantity.clearfix
+                span.product__form__feature__quantity--title Количество:
+                a.product__form__feature__quantity--link(href="") -
+                input.product__form__feature__quantity--value(value="1")
+                a.product__form__feature__quantity--link(href="") +
+            .product__form__feature__price.clearfix
+                .product__form__feature__price--discount 2000 грн
+                .product__form__feature__price--realprice 1500 грн
+                .product__form__feature__price--available Есть в наличии
+            .product__form__feature__submit
+                input.product__form__feature__submit--btn(type="submit" value="КУПИТЬ")
+                a.product__form__feature__submit--condition(href="#") Оплата и доставка
+.related.clearfix
+    h3.related__title Похожие изделия
+
+    .products__item.products__item
+        img(src="http://lorempixel.com/164/160/fashion").products__item__image
+        a.products__item__title(href="#") Кольцо
+        span.products__item__sku Арт. 123456
+        span.products__item__price 1000 грн.
+    .products__item.products__item
+        img(src="http://lorempixel.com/164/160/fashion").products__item__image
+        a.products__item__title(href="#") Кольцо
+        span.products__item__sku Арт. 123456
+        span.products__item__price 1000 грн.
+    .products__item.products__item
+        img(src="http://lorempixel.com/164/160/fashion").products__item__image
+        a.products__item__title(href="#") Кольцо
+        span.products__item__sku Арт. 123456
+        span.products__item__price 1000 грн.
+    .products__item.products__item
+        img(src="http://lorempixel.com/164/160/fashion").products__item__image
+        a.products__item__title(href="#") Кольцо
+        span.products__item__sku Арт. 123456
+        span.products__item__price 1000 грн.
+    .products__item.products__item
+        img(src="http://lorempixel.com/164/160/fashion").products__item__image
+        a.products__item__title(href="#") Кольцо
+        span.products__item__sku Арт. 123456
+        span.products__item__price 1000 грн.
+    .products__item.products__item__last
+        img(src="http://lorempixel.com/164/160/fashion").products__item__image
+        a.products__item__title(href="#") Кольцо
+        span.products__item__sku Арт. 123456
+        span.products__item__price 1000 грн.
+.comments
+    h3 КОММЕНТАРИИ
+include ./includes/footer.jade
