@@ -22,7 +22,7 @@ gulp.task('templatesMin', ['styles', 'scripts'], function () {
     .pipe($.jade({pretty: true}))
     .on('error', $.util.log)
     .pipe(assets)
-    .pipe($.if('*.js', $.uglify()))
+//    .pipe($.if('*.js', $.uglify()))
 //    .pipe($.if('*.css', $.csso()))
     .pipe(assets.restore())
     .pipe($.useref())
@@ -46,7 +46,7 @@ gulp.task('scripts', function () {
   gulp.src('app/scripts/**/*.coffee')
     .pipe($.coffee())
     .on('error', $.util.log)
-    .pipe($.uglify())
+//    .pipe($.uglify())
     .pipe(gulp.dest('.tmp/scripts'))
 });
 
@@ -99,7 +99,7 @@ gulp.task('serve:develop', ['clean'], function () {
   gulp.start(['templates', 'fonts', 'styles', 'scripts']);
 
   browserSync({
-    notify: false,
+    notify: true,
     port: 9000,
     server: {
       baseDir: ['dist', '.tmp', 'app'],
@@ -112,6 +112,7 @@ gulp.task('serve:develop', ['clean'], function () {
   gulp.watch([
     'dist/**/*.html',
     'dist/styles/**/*.css',
+    'dist/scripts/**/*.coffee',
     'dist/scripts/**/*.js',
     'dist/fonts/**/*',
     'app/images/**/*'
