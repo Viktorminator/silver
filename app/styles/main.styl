@@ -730,14 +730,7 @@ h1,h2,h3,h4,h5,h6
 
 
 
-.clearfix
-  zoom 1
-  &:after
-    clear both
 
-.clearfix:before, .clearfix:after
-  content ""
-  display block
 
 
 /******** CONTACT.html *******/
@@ -758,3 +751,43 @@ h1,h2,h3,h4,h5,h6
             padding 12px 12px 0 120px
             background #fff
             height 190px
+.contact
+    @extend .row
+    margin-top 140px
+    &__item
+        position relative
+        width 369px
+        height 400px
+        float left
+        margin-right 26px
+        border-right $color_secondary 2px solid
+        &:last-child
+            margin-right 0
+            border none
+    &__form
+        font-size 20px
+        &__name, &__email, &__submit
+            height 45px
+        &__name, &__email, &__text, &__submit
+            width 306px
+            padding-left 10px
+            margin 0 0 10px 0
+        &__submit
+            width 320px
+            background-color $color_font
+            color #fff
+            border none
+            font-weight 700
+            text-transform uppercase
+            &:hover
+                background $color_font_secondary
+                transition(background, 200ms linear)
+            
+.clearfix
+  zoom 1
+  &:after
+    clear both
+
+.clearfix:before, .clearfix:after
+  content ""
+  display block

@@ -6,23 +6,55 @@ include ./includes/head.jade
             h2 СТЕРЛИНГ9, ООО
             p ул.Кирова, 38 <br/> г.Харьков, 61001 <br/> Украина
 
-.contacts
+.contact.clearfix
     .contact__item
-        h3.contact__item__title РОЗНИЧНАЯ ТОРГОВЛЯ
-        .contact__item__numbers +38 (066) 344 79 50 <br/> +38 (097) 783 39 99
-        .contact__item__skype sterling9_ltd
-        .contact__item__email order@sterling9.com.ua
+        h3 РОЗНИЧНАЯ ТОРГОВЛЯ
+        span.fa-stack.fa-lg
+            i.fa.fa-circle.fa-stack-2x.phone
+            i.fa.fa-phone.fa-stack-1x.fa-inverse 
+          | +38 (066) 344 79 50
+        br
+        span.fa-stack.fa-lg
+            i.fa.fa-circle.fa-stack-2x.phone
+            i.fa.fa-phone.fa-stack-1x.fa-inverse 
+          | +38 (097) 783 39 99
+        br
+        span.fa-stack.fa-lg
+            i.fa.fa-circle.fa-stack-2x.skype
+            i.fa.fa-skype.fa-stack-1x.fa-inverse 
+          | sterling9_ltd
+        br
+        span.fa-stack.fa-lg
+            i.fa.fa-circle.fa-stack-2x.envelope
+            i.fa.fa-envelope.fa-stack-1x.fa-inverse 
+          | order@sterling9.com.ua
     .contact__item
-        h3.contact__item__title ОПТОВАЯ ТОРГОВЛЯ
-        .contact__item__numbers +38 (066) 344 79 50 <br/> +38 (097) 783 39 99
-        .contact__item__skype sterling9_ltd
-        .contact__item__email order@sterling9.com.ua
-.contact__item
-        .contact__item__title Написать письмо
+        h3 ОПТОВАЯ ТОРГОВЛЯ
+        span.fa-stack.fa-lg
+            i.fa.fa-circle.fa-stack-2x.phone
+            i.fa.fa-phone.fa-stack-1x.fa-inverse 
+          | +38 (066) 344 79 50
+        br
+        span.fa-stack.fa-lg
+            i.fa.fa-circle.fa-stack-2x.phone
+            i.fa.fa-phone.fa-stack-1x.fa-inverse 
+          | +38 (097) 783 39 99
+        br
+        span.fa-stack.fa-lg
+            i.fa.fa-circle.fa-stack-2x.skype
+            i.fa.fa-skype.fa-stack-1x.fa-inverse 
+          | sterling9_ltd
+        br
+        span.fa-stack.fa-lg
+            i.fa.fa-circle.fa-stack-2x.envelope
+            i.fa.fa-envelope.fa-stack-1x.fa-inverse 
+          | order@sterling9.com.ua
+    .contact__item
+        h3.contact__item__title НАПИСАТЬ ПИСЬМО
         form.contact__form
             input.contact__form__name(type="text" placeholder="Имя")
             input.contact__form__email(type="email" placeholder="E-mail")
-            textarea.contact__form__text(type="text" placeholder="Введите текст сообщения")
+            textarea.contact__form__text(type="text" placeholder="Введите текст сообщения" rows="5")
             input.contact__form__submit(type="submit" value="ОТПРАВИТЬ")
 
 include ./includes/footer.jade
