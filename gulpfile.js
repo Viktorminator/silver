@@ -78,11 +78,15 @@ gulp.task('extras', function () {
 
 gulp.task('build', ['clean'], function () {
   gulp.start(['templatesMin', 'fonts', 'images', 'extras']);
-  gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
+  gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: false}));
 });
 
 gulp.task('htmlto', function() {
   gulp.src('dist/*.html').pipe(gulp.dest('../sterling/public/site_templ'));
+});
+
+gulp.task('stylusto', function() {
+  gulp.src('app/styles/*.styl').pipe(gulp.dest('../sterling/vendor/assets/stylesheets/spree/frontend'));
 });
 
 gulp.task('wiredep', function () {
