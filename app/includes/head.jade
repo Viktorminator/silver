@@ -118,7 +118,9 @@ html
     ul.main-menu
       li.main-menu__listitem
         a.main-menu__item.main-menu__item--active(href='/shop.html') Кольца
-        ul.main-menu__dropdown(style="visibility:hidden;")
+        a.main-menu__dropdownlink(href='#')
+          span.main-menu__caret
+        ul.main-menu__dropdown(style="display:none;")
           li
             a.main-menu__dropdown__item(href='#') Subitem 1
           li
