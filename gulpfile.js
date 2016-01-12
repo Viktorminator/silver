@@ -78,8 +78,11 @@ gulp.task('extras', function () {
 
 gulp.task('build', ['clean'], function () {
   gulp.start(['templatesMin', 'fonts', 'images', 'extras']);
-
   gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
+});
+
+gulp.task('htmlto', function() {
+  gulp.src('dist/*.html').pipe(gulp.dest('../sterling/public/site_templ'));
 });
 
 gulp.task('wiredep', function () {
