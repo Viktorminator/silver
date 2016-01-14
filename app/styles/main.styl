@@ -7,19 +7,19 @@ vendor(prop, args)
     {prop} args
 
 border-radius()
-	vendor('border-radius', arguments)
+    vendor('border-radius', arguments)
 
 box-shadow()
-	vendor('box-shadow', arguments)
+    vendor('box-shadow', arguments)
 
 transition()
-	vendor('transition', arguments)
+    vendor('transition', arguments)
 
 transform()
-	vendor('transform', arguments)
+    vendor('transform', arguments)
 
 transform-origin()
-	vendor('transform-origin', arguments)
+    vendor('transform-origin', arguments)
 
 // Color Variables
 $color_primary    = #48A3F1
@@ -109,6 +109,9 @@ h1,h2,h3,h4,h5,h6
             color $color_font
             &--warning
                 color red
+        &__switcher
+            float right
+            width 90px
         &__user                         //****** USER MENU
             color $color_font_active
             font-size 14px
@@ -839,3 +842,4 @@ h1,h2,h3,h4,h5,h6
             padding 0 60px
             width 460px
             height 460px
+
